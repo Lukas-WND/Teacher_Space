@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Teacher_Space</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="sem_cadastro_cadastre_se_aqui">Sem cadastro? Cadastre-se aqui!</string>
 </resources>
