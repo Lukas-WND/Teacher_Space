@@ -3,11 +3,16 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
     <string name="entrar">Entrar</string>
     <string name="sem_cadastro_cadastre_se_aqui">Sem cadastro? Cadastre-se aqui!</string>
+    <string name="ja_cadastrado">Já possui uma conta?</string>
+    <string name="acesse_aqui">Acesse aqui</string>
     <string name="app_description">Organize sua agenda e acompanhe seus alunos com facilidade</string>
     <string name="home_logo">Logo da tela de Home</string>
     <string name="sign_up">Cadastro</string>
     <string name="full_name_sign_up">Nome Completo</string>
-    <string name="subject">Disciplina</string>
+    <string name="discipline_sign_up">Disciplina</string>
+    <string name="phone_sign_up">Celular</string>
+    <string name="sign_up_button">Cadastrar</string>
 </resources>
