@@ -15,4 +15,7 @@
     <string name="discipline_sign_up">Disciplina</string>
     <string name="phone_sign_up">Celular</string>
     <string name="sign_up_button">Cadastrar</string>
+    <string name="sign_up_student">Cadastro de Aluno</string>
+    <string name="birth_date">Data de Nascimento</string>
+    <string name="cpf" translatable="false">CPF</string>
 </resources>

@@ -4,9 +4,18 @@
     <string name="login">Sign In</string>
     <string name="email">E-mail</string>
     <string name="senha">Password</string>
+    <string name="confirmar_senha">Confirm Password</string>
     <string name="entrar">Login</string>
     <string name="sem_cadastro_cadastre_se_aqui">Don\'t have an account? Sign up!</string>
+    <string name="ja_cadastrado">Already have an account?</string>
+    <string name="acesse_aqui">Click here</string>
     <string name="app_description">Organize your schedule and keep track of your students with ease</string>
     <string name="home_logo">Home Logo</string>
     <string name="sign_up">Sign Up</string>
+    <string name="full_name_sign_up">Full Name</string>
+    <string name="discipline_sign_up">Subject</string>
+    <string name="phone_sign_up">Phone</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="sign_up_student">Student Registration</string>
+    <string name="birth_date">Birthday</string>
 </resources>
