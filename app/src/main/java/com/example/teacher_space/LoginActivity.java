@@ -47,7 +47,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        tvRegister.setOnClickListener(this::onClick);
+        tvRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, SignUpProfessorActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void onClick(View v) {

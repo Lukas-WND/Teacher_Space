@@ -13,19 +13,19 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface TeacherAPI {
-    @GET("/teacher")
+    @GET("/teachers")
     Call<List<TeacherDTO>> getTeachers();
 
-    @GET("teacher/{id}")
+    @GET("teachers/{id}")
     Call<TeacherDTO> getTeacherById(@Path("id") Long id);
 
-    @POST("/teacher")
+    @POST("/teachers")
     Call<TeacherDTO> createTeacher(@Body TeacherDTO teacherDTO);
 
-    @PUT("/teacher/{id}")
+    @PUT("/teachers/{id}")
     Call<TeacherDTO> updateTeacher(@Path("id") Long id,
                                    @Body TeacherDTO teacherDTO);
 
-    @DELETE("/teacher/{id}")
+    @DELETE("/teachers/{id}")
     Call<TeacherDTO> deleteTeacher(@Path("id") Long id);
 }

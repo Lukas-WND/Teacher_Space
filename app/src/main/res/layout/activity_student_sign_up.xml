@@ -48,7 +48,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/editTextFullName"
+            android:id="@+id/full_name_professor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/user"
@@ -84,7 +84,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/phone_professor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/phone"
@@ -102,7 +102,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/email_professor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/mail"
@@ -149,7 +149,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sign_up_button_professor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
