@@ -62,7 +62,7 @@
             android:id="@+id/education_level_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/education_level_sign_up"
+            android:text="@string/education_level"
             android:textColor="@color/custom_gray" />
 
         <EditText
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/book_check"
             android:drawablePadding="8dp"
-            android:hint="@string/education_level_sign_up"
+            android:hint="@string/education_level"
             android:inputType="text"
             android:textSize="16sp" />
 

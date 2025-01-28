@@ -18,4 +18,9 @@
     <string name="sign_up_student">Cadastro de Aluno</string>
     <string name="birth_date">Data de Nascimento</string>
     <string name="cpf" translatable="false">CPF</string>
+    <string name="education_level">Nível de Ensino</string>
+    <string name="student_list">Lista de Alunos</string>
+    <string name="return_button">Botão de Retorno</string>
+    <string name="add_button">Botão de Adicionar</string>
+    <string name="name">Nome</string>
 </resources>
