@@ -1,7 +1,7 @@
 package com.example.teacher_space.entity;
 
 public class Teacher {
-    private long id;
+    private String id;
     private String name;
     private String subject;
     private String phone;
@@ -10,7 +10,7 @@ public class Teacher {
 
     public Teacher(){}
 
-    public Teacher(long id, String name, String subject, String phone, String email, String password) {
+    public Teacher(String id, String name, String subject, String phone, String email, String password) {
         this.id = id;
         this.name = name;
         this.subject = subject;
@@ -19,11 +19,11 @@ public class Teacher {
         this.password = password;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -1,26 +1,47 @@
 <resources>
+    <!-- Nome do aplicativo -->
     <string name="app_name">Teacher Space</string>
+
+    <!-- Tela de Login -->
     <string name="login">Login</string>
-    <string name="email">Email</string>
+    <string name="email">E-mail</string>
     <string name="senha">Senha</string>
-    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="confirmar_senha">Confirmar senha</string>
     <string name="entrar">Entrar</string>
-    <string name="sem_cadastro_cadastre_se_aqui">Sem cadastro? Cadastre-se aqui!</string>
+    <string name="sem_cadastro_cadastre_se_aqui">Ainda não tem cadastro? Cadastre-se aqui!</string>
     <string name="ja_cadastrado">Já possui uma conta?</string>
     <string name="acesse_aqui">Acesse aqui</string>
-    <string name="app_description">Organize sua agenda e acompanhe seus alunos com facilidade</string>
-    <string name="home_logo">Logo da tela de Home</string>
+
+    <!-- Descrição do aplicativo -->
+    <string name="app_description">Organize sua agenda e acompanhe seus alunos com facilidade.</string>
+
+    <!-- Home -->
+    <string name="home_logo">Logo da tela inicial</string>
+    <string name="home">Início</string>
+    <string name="list">Lista</string>
+    <string name="logout">Sair</string>
+    <string name="welcome_to_teacher_space">Olá, %s! Bem-vindo ao Teacher Space!.</string>
+
+    <!-- Cadastro de Professor -->
     <string name="sign_up">Cadastro</string>
-    <string name="full_name_sign_up">Nome Completo</string>
+    <string name="full_name_sign_up">Nome completo</string>
     <string name="discipline_sign_up">Disciplina</string>
     <string name="phone_sign_up">Celular</string>
     <string name="sign_up_button">Cadastrar</string>
-    <string name="sign_up_student">Cadastro de Aluno</string>
-    <string name="birth_date">Data de Nascimento</string>
+
+    <!-- Cadastro de Aluno -->
+    <string name="sign_up_student">Cadastro de aluno</string>
+    <string name="birth_date">Data de nascimento</string>
     <string name="cpf" translatable="false">CPF</string>
-    <string name="education_level">Nível de Ensino</string>
-    <string name="student_list">Lista de Alunos</string>
-    <string name="return_button">Botão de Retorno</string>
-    <string name="add_button">Botão de Adicionar</string>
+    <string name="education_level">Nível de ensino</string>
+    <string name="student_list">Lista de alunos</string>
+
+    <!-- Botões -->
+    <string name="return_button">Voltar</string>
+    <string name="add_button">Adicionar</string>
+
+    <!-- Campos gerais -->
     <string name="name">Nome</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

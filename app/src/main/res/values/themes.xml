@@ -3,7 +3,9 @@
     <style name="Base.Theme.Teacher_Space" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-         <item name="colorPrimary">@color/custom_blue</item>
+        <item name="colorPrimary">@color/custom_blue</item>
+        <item name="colorPrimaryVariant">@color/custom_blue</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 

@@ -11,6 +11,7 @@
     <string name="acesse_aqui">Click here</string>
     <string name="app_description">Organize your schedule and keep track of your students with ease</string>
     <string name="home_logo">Home Logo</string>
+    <string name="welcome_to_teacher_space">Hello, %s, Welcome to the Teacher Space</string>
     <string name="sign_up">Sign Up</string>
     <string name="full_name_sign_up">Full Name</string>
     <string name="discipline_sign_up">Subject</string>
@@ -23,4 +24,7 @@
     <string name="return_button">Return Button</string>
     <string name="add_button">Add Button</string>
     <string name="name">Name</string>
+    <string name="home">Home</string>
+    <string name="list">List</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.teacher_space;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.teacher_space.MainActivity;
 import com.example.teacher_space.dtos.LoginDTO;
+import com.example.teacher_space.dtos.LoginResponseDTO;
 import com.example.teacher_space.dtos.TeacherDTO;
 import com.example.teacher_space.interfaces.TeacherAPI;
 
@@ -59,14 +61,22 @@ public class LoginActivity extends AppCompatActivity {
             }
 
 
-            Call<LoginDTO> call = teacherAPI.login(new LoginDTO(email, password));
-            call.enqueue(new Callback<LoginDTO>() {
+            Call<LoginResponseDTO> call = teacherAPI.login(new LoginDTO(email, password));
+            call.enqueue(new Callback<LoginResponseDTO>() {
                 @Override
-                public void onResponse(Call<LoginDTO> call, Response<LoginDTO> response) {
+                public void onResponse(Call<LoginResponseDTO> call, Response<LoginResponseDTO> response) {
                     if (response.isSuccessful()) {
+                        Log.d("Login_Activity", "Email: " + response.body().getTeacher().getEmail() + " | Name: " + response.body().getTeacher().getName());
+                        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("user_id", response.body().getTeacher().getId());
+                        editor.putString("user_name", response.body().getTeacher().getName());
+                        editor.putString("user_email", response.body().getTeacher().getEmail());
+                        editor.apply();
+
                         Toast.makeText(LoginActivity.this, "Usuario logado com sucesso!", Toast.LENGTH_SHORT).show();
                         // Redirecionar para a tela de login que ja estava aberta anteriormente
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
@@ -75,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<LoginDTO> call, Throwable t) {
+                public void onFailure(Call<LoginResponseDTO> call, Throwable t) {
                     Log.e("LoginActivity", "onFailure: " + t.getMessage(), t);
                     Toast.makeText(LoginActivity.this, "Erro de conexão: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
