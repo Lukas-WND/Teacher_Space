@@ -29,11 +29,11 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView tv = view.findViewById(R.id.welcome_text);
+        TextView tv = view.findViewById(R.id.hello_user);
 
         SharedPreferences sp = requireActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
         String username = sp.getString("user_name", "Usuário");
 
-        tv.setText(getString(R.string.welcome_to_teacher_space, username));
+        tv.setText(getString(R.string.hello_user, username));
     }
 }

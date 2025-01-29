@@ -5,11 +5,30 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
-
-    <TextView
-        android:id="@+id/welcome_text"
+    <LinearLayout
+        android:id="@+id/layout_home_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/welcome_to_teacher_space" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/hello_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_user"
+            android:textSize="24sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_app"
+            android:textSize="24sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
 
 </FrameLayout>

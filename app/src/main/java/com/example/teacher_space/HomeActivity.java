@@ -27,19 +27,17 @@ public class HomeActivity extends AppCompatActivity {
 
         // Configura o listener para mudança de fragmentos ao selecionar um item
         binding. appNavigationView.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case 1000017:
-                    replaceFragment(new HomeFragment());
-                    return true;
-                case 1000016:
-                    replaceFragment(new StudentsListFragment());
-                    return true;
-                case 1000015:
-                    replaceFragment(new LogoutFragment());
-                    return true;
-                default:
-                    return false;
-            }
+            int itemId = item.getItemId();
+            if (itemId == R.id.home_icon_menu) {
+                replaceFragment(new HomeFragment());
+                return true;
+            } else if (itemId == R.id.list_icon_menu) {
+                replaceFragment(new StudentsListFragment());
+                return true;
+            } else if (itemId == R.id.logout_icon_menu) {
+                replaceFragment(new LogoutFragment());
+                return true;
+            } return false;
         });
     }
 

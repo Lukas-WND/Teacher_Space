@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class SignUpProfessorActivity extends AppCompatActivity {
 
     private EditText pName, pDisciplina, pCelular, pEmail, pSenha, pConfirmarSenha;
     private Button bCadastrar;
+    private ImageButton retornar;
     private TextView jaCadastrado;
     private TeacherAPI teacherAPI;
 
@@ -47,6 +49,7 @@ public class SignUpProfessorActivity extends AppCompatActivity {
         pEmail = findViewById(R.id.email_professor);
         pSenha = findViewById(R.id.password_professor);
         pConfirmarSenha = findViewById(R.id.confirm_passowrd_professor);
+        retornar = findViewById(R.id.return_button_sign_up_professor);
 
         bCadastrar = findViewById(R.id.sign_up_button_professor);
 
@@ -60,7 +63,6 @@ public class SignUpProfessorActivity extends AppCompatActivity {
         teacherAPI = retrofit.create(TeacherAPI.class);
 
 
-
         // Configurar listener para botão de cadastro
         bCadastrar.setOnClickListener(v -> handleSignUp());
 
@@ -68,6 +70,10 @@ public class SignUpProfessorActivity extends AppCompatActivity {
         jaCadastrado.setOnClickListener(v -> {
             Intent intent = new Intent(SignUpProfessorActivity.this, LoginActivity.class);
             startActivity(intent);
+        });
+
+        retornar.setOnClickListener(v -> {
+            finish();
         });
     }
 
