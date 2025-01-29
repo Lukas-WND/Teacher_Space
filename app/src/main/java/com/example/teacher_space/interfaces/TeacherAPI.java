@@ -1,5 +1,6 @@
 package com.example.teacher_space.interfaces;
 
+import com.example.teacher_space.dtos.LoginDTO;
 import com.example.teacher_space.dtos.TeacherDTO;
 
 import java.util.List;
@@ -21,6 +22,9 @@ public interface TeacherAPI {
 
     @POST("/teachers")
     Call<TeacherDTO> createTeacher(@Body TeacherDTO teacherDTO);
+
+    @POST("/teachers/signin")
+    Call<LoginDTO> login(@Body LoginDTO dto);
 
     @PUT("/teachers/{id}")
     Call<TeacherDTO> updateTeacher(@Path("id") Long id,

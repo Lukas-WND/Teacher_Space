@@ -18,6 +18,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.teacher_space.dtos.TeacherDTO;
 import com.example.teacher_space.interfaces.TeacherAPI;
 
+import java.util.Objects;
+
+import okhttp3.HttpUrl;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -51,10 +54,12 @@ public class SignUpProfessorActivity extends AppCompatActivity {
 
         // Inicializar Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.100.83.143:3000") // Substitua pela URL da sua API
+                .baseUrl("https://api-teacherspace.onrender.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         teacherAPI = retrofit.create(TeacherAPI.class);
+
+
 
         // Configurar listener para botão de cadastro
         bCadastrar.setOnClickListener(v -> handleSignUp());
@@ -96,7 +101,7 @@ public class SignUpProfessorActivity extends AppCompatActivity {
             public void onResponse(Call<TeacherDTO> call, Response<TeacherDTO> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(SignUpProfessorActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                    // Redirecionar para a tela de login
+                    // Redirecionar para a tela de login que ja estava aberta anteriormente
                     Intent intent = new Intent(SignUpProfessorActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
