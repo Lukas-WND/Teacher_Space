@@ -22,7 +22,7 @@ public interface StudentAPI {
     Call<List<GetStudentDTO>> getStudentByTeacherId(@Path("id") String id);
 
     @POST("/students")
-    Call<GetStudentDTO> createStudent(@Body SendStudentDTO teacherDTO);
+    Call<GetStudentDTO> createStudent(@Body SendStudentDTO studentDTO);
 
 
     @DELETE("/students/{id}")

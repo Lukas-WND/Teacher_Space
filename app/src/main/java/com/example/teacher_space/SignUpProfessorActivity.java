@@ -10,24 +10,16 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teacher_space.dtos.TeacherDTO;
 import com.example.teacher_space.interfaces.TeacherAPI;
 
-import java.util.Objects;
-
-import okhttp3.HttpUrl;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Tag;
 
 public class SignUpProfessorActivity extends AppCompatActivity {
 
@@ -43,15 +35,15 @@ public class SignUpProfessorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_professor_sign_up);
 
-        pName = findViewById(R.id.full_name_professor);
+        pName = findViewById(R.id.full_name_aluno);
         pDisciplina = findViewById(R.id.subject_professor);
-        pCelular = findViewById(R.id.phone_professor);
-        pEmail = findViewById(R.id.email_professor);
+        pCelular = findViewById(R.id.phone_aluno);
+        pEmail = findViewById(R.id.email_aluno);
         pSenha = findViewById(R.id.password_professor);
         pConfirmarSenha = findViewById(R.id.confirm_passowrd_professor);
         retornar = findViewById(R.id.return_button_sign_up_professor);
 
-        bCadastrar = findViewById(R.id.sign_up_button_professor);
+        bCadastrar = findViewById(R.id.sign_up_button_aluno);
 
         jaCadastrado = findViewById(R.id.already_registered_sign_up_professor_button);
 

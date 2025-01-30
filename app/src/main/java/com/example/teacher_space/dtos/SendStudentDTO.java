@@ -8,18 +8,30 @@ public class SendStudentDTO {
     private String category;
     private String phone;
     private String email;
-    private Date birthDate;
+    private String birthdate;
     private String cpf;
 
-    public SendStudentDTO(){}
+    private String teacherId;
 
-    public SendStudentDTO(String name, String category, String phone, String email, Date birthDate, String cpf) {
+    public SendStudentDTO() {
+    }
+
+    public SendStudentDTO(String name, String category, String phone, String email, String birthdate, String cpf, String teacherId) {
         this.name = name;
         this.category = category;
         this.phone = phone;
         this.email = email;
-        this.birthDate = birthDate;
+        this.birthdate = birthdate;
         this.cpf = cpf;
+        this.teacherId = teacherId;
+    }
+
+    public String getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(String teacherId) {
+        this.teacherId = teacherId;
     }
 
     public String getName() {
@@ -54,12 +66,12 @@ public class SendStudentDTO {
         this.email = email;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public String getBirthDate() {
+        return birthdate;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
     public String getCpf() {

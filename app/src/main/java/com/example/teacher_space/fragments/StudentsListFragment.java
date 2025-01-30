@@ -1,6 +1,7 @@
 package com.example.teacher_space.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -14,9 +15,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.teacher_space.R;
+import com.example.teacher_space.SignUpStudentActivity;
 import com.example.teacher_space.dtos.GetStudentDTO;
 import com.example.teacher_space.entity.Student;
 import com.example.teacher_space.interfaces.StudentAPI;
@@ -35,12 +38,33 @@ public class StudentsListFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private StudentAdapter studentsAdapter;
+    private ImageButton returnButton;
+    private ImageButton registerButton;
     private List<Student> students = new ArrayList<>(); // Lista inicial vazia
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_students_list, container, false);
+        // Infla o layout do fragmento
+        View view = inflater.inflate(R.layout.fragment_students_list, container, false);
+
+        // Inicializa os botões
+        returnButton = view.findViewById(R.id.imageButton);
+        registerButton = view.findViewById(R.id.imageButton2);
+
+        // Configura os eventos de clique
+        returnButton.setOnClickListener(v -> {
+            // Código para voltar à tela anterior
+            requireActivity().getSupportFragmentManager().popBackStack();
+        });
+
+        registerButton.setOnClickListener(v -> {
+            // Código para abrir uma nova Activity
+            Intent intent = new Intent(requireContext(), SignUpStudentActivity.class);
+            startActivity(intent);
+        });
+
+        return view;
     }
 
     @Override
@@ -60,6 +84,19 @@ public class StudentsListFragment extends Fragment {
         studentsAdapter = new StudentAdapter(getContext(), students);
         recyclerView.setAdapter(studentsAdapter);
 
+        // Chama a função para carregar os dados
+        loadStudentData();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Chama a função novamente ao retomar o fragmento
+        loadStudentData();
+    }
+
+    private void loadStudentData() {
         SharedPreferences sp = requireActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
         String userId = sp.getString("user_id", "");
 

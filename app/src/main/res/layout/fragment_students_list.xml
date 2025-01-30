@@ -11,10 +11,10 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_gravity="top"
         android:gravity="center"
-        android:padding="16dp"
-        android:layout_gravity="top">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -49,20 +49,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="72dp"
-        android:ems="10"
-        android:inputType="text"
+        android:layout_marginEnd="16dp"
         android:drawableStart="@drawable/search"
         android:drawablePadding="8dp"
-        android:hint="@string/name" />
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text" />
 
     <!-- Lista de estudantes -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_alunos"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="120dp"
-        android:paddingHorizontal="16dp"
-        tools:listitem="@layout/card_aluno" />
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_alunos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:paddingHorizontal="16dp"
+            tools:listitem="@layout/card_aluno" />
+    </ScrollView>
 </FrameLayout>

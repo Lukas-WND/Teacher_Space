@@ -48,7 +48,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/full_name_professor"
+            android:id="@+id/full_name_aluno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/user"
@@ -66,7 +66,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/editTextEducationLevel"
+            android:id="@+id/category_student"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/book_check"
@@ -84,7 +84,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/phone_professor"
+            android:id="@+id/phone_aluno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/phone"
@@ -102,7 +102,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/email_professor"
+            android:id="@+id/email_aluno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/mail"
@@ -120,7 +120,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/editTextBirthDate"
+            android:id="@+id/dataNascimento_aluno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/calendar_days"
@@ -138,7 +138,7 @@
             android:textColor="@color/custom_gray" />
 
         <EditText
-            android:id="@+id/editTextCPF"
+            android:id="@+id/cpf_aluno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/id_card"
@@ -149,7 +149,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/sign_up_button_professor"
+        android:id="@+id/sign_up_button_aluno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
